@@ -1,0 +1,50 @@
+body{
+    color: rgba(255, 255, 255, 0.9);
+    background-color: black;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00afef;
+}
+
+
+.accent {
+    color: #00afef;
+}
+
+.social {
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: 50px;
+    left: 0px;
+}
+
+.social a:hover {
+    -webkit-transform: scaleX(1.05) !important;
+    transform: scale(1.05) !important;
+}
+
+.social .h3{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    h1{
+        font-size: 18vw !important;
+    }
+    .lead
+    {
+        font-size: 5vw !important;
+    }
+}
