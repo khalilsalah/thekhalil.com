@@ -1,0 +1,247 @@
+:root {
+    --accent: #00afef;
+    --white: rgba(255, 255, 255, 0.9);
+    --black: #000;
+}
+
+@font-face {
+    font-family: SourceCodePro;
+    src: url(../fonts/SourceCodePro/SourceCodePro-Regular.ttf);
+}
+
+body {
+    color: var(--white);
+    background-color: var(--black);
+    animation: fade-in 2s;
+    font-family: SourceCodePro, 'Courier New', Courier, monospace !important;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: var(--accent);
+}
+
+a {
+    color: var(--white);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--white);
+    margin: 1em 0;
+    padding: 0;
+    width: 30% !important;
+    margin: auto;
+}
+
+#logo-title {
+    display: inline-block;
+}
+
+#logo img {
+    border-radius: 50%;
+    max-width: 40px;
+    margin-top: -10px;
+    margin-right: 2px;
+}
+
+#logo .h3 {
+    display: block;
+    padding-top: 25px;
+}
+
+#head {
+    min-height: 100vh;
+}
+
+#head-title {
+    display: none;
+}
+
+#about {
+    margin-bottom: 125px;
+}
+
+#footer {
+    backdrop-filter: blur(5px);
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    padding: 25px;
+    padding-top: 50px;
+}
+
+#footer a:hover {
+    -webkit-transform: scaleX(1.1) !important;
+    transform: scale(1.1) !important;
+}
+
+#footer .h3 {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+#goToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    border-color: var(--white);
+    border-style: solid;
+    border-width: thin;
+}
+
+#goToTop:hover {
+    background-color: var(--black);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+.sticky-top-bar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    padding-bottom: 25px;
+    padding-left: 50px;
+    background-color: var(--black);
+    backdrop-filter: blur(4px);
+}
+
+.section {
+    margin: 50px auto 50px auto;
+    max-width: 800px;
+    align-self: center;
+}
+
+.section .section-body {
+    display: inline-block;
+}
+
+.section .section-title {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.section .section-body h5 {
+    text-align: center;
+    font-size: 28px !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .section {
+        margin: 50px 100px 50px 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 10vw !important;
+    }
+    #head p {
+        font-size: 3vw !important;
+    }
+    .sticky-logo {
+        zoom: 80%;
+    }
+    .sticky-top-bar {
+        /* margin-left: 100px; */
+        zoom: 90%;
+    }
+    .section {
+        margin: 50px 80px 50px 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 10vw !important;
+    }
+    #head p {
+        font-size: 5vw !important;
+    }
+    .sticky-logo {
+        zoom: 60%;
+    }
+    .sticky-top-bar {
+        /* margin-left: 50px; */
+        zoom: 85%;
+    }
+    .section {
+        margin: 50px 50px 50px 50px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 10vw !important;
+    }
+    #head p {
+        font-size: 3vw !important;
+    }
+    .sticky-logo {
+        zoom: 50%;
+        zoom: 50%;
+    }
+    .sticky-top-bar {
+        /* margin-left: 50px; */
+        zoom: 80%;
+    }
+    .section {
+        margin: 50px 20px 50px 20px;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes reveal {
+    from {
+        transform: scale(0.001);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes slide {
+    to {
+        transform: translateX(1.5em)
+    }
+}
