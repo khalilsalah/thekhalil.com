@@ -73,7 +73,8 @@ hr {
 }
 
 #head {
-    min-height: 100vh;
+    height: 100vh;
+    min-height: 375px;
 }
 
 #head-title {
@@ -105,7 +106,7 @@ hr {
     height: 50px;
 }
 
-#goToTop {
+#btn-goto-Top {
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -115,10 +116,10 @@ hr {
     border-color: var(--white);
     border-style: solid;
     border-width: thin;
+    background-color: var(--black);
 }
 
-#goToTop:hover {
-    background-color: var(--black);
+#btn-goto-Top:hover {
     color: var(--accent);
     border-color: var(--accent);
 }
@@ -156,6 +157,13 @@ hr {
 .section .section-body h5 {
     text-align: center;
     font-size: 28px !important;
+}
+
+@media screen and (max-height: 375px) {
+    #footer {
+        padding: 15px;
+        padding-top: 20px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -219,6 +227,13 @@ hr {
     }
     .section {
         margin: 50px 20px 50px 20px;
+    }
+}
+
+@media print {
+    body {
+        color: #000;
+        background-color: #fff;
     }
 }
 

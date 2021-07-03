@@ -1,14 +1,14 @@
+var $window = $(window);
 var $logo = $('#logo');
 var $footer = $('#footer');
-var $goToTop = $('#goToTop');
+var $btnGotoTop = $('#btn-goto-Top');
 var $myCV = $('#myCV');
-var $window = $(window);
 var $cv = $('div#cv');
 
 var headerOffsetTop = $logo.offset().top;
 $(document).ready(function () {
     $logo.hide();
-    $goToTop.hide();
+    $btnGotoTop.hide();
     $footer.hide();
     $('#head-intro').delay(1000).fadeOut().promise().done(function () {
         $('#head-title').fadeIn();
@@ -23,10 +23,10 @@ $(document).ready(function () {
         }
     });
 
-    $goToTop.click(function () {
+    $btnGotoTop.click(function () {
         $("html, body").animate({ scrollTop: 0 }, 200);
     });
-
+    
     $myCV.click(function () {
         $cv.fadeIn();
         $([document.documentElement, document.body]).animate({
@@ -38,16 +38,16 @@ $(document).ready(function () {
 });
 $window.scroll(function () {
     var scrollTop = $window.scrollTop();
-    if (scrollTop + 400 >= headerOffsetTop) {
+    if (scrollTop + 300 >= headerOffsetTop) {
         $logo.addClass('sticky-top-bar');
         $logo.fadeIn();
         $footer.fadeOut();
-        $goToTop.fadeIn();
+        $btnGotoTop.fadeIn();
     }
     else {
         $logo.fadeOut();
         $footer.fadeIn();
-        $goToTop.fadeOut();
+        $btnGotoTop.fadeOut();
     }
     if (scrollTop == 0)
         $cv.hide();
