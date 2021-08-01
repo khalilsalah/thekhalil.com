@@ -142,11 +142,11 @@ hr {
 .section {
     margin: 50px auto 50px auto;
     max-width: 800px;
-    align-self: center;
 }
 
 .section .section-body {
     display: inline-block;
+    width: 100%;
 }
 
 .section .section-title {
