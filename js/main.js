@@ -10,12 +10,10 @@ $(document).ready(function () {
     $logo.hide();
     $btnGotoTop.hide();
     $footer.hide();
-    $('#head-intro').delay(1000).fadeOut().promise().done(function () {
-        $('#head-title').fadeIn();
-        if ($window.scrollTop() < headerOffsetTop) {
-            $footer.fadeIn();
-        }
-    });
+    $('#head-title').fadeIn();
+    if ($window.scrollTop() < headerOffsetTop) {
+        $footer.fadeIn();
+    }
     $('h1,h3,div:contains("Khalil")').each(function () {
         if ($(this).children().length < 1) {
             var content = $(this).html();
@@ -26,7 +24,7 @@ $(document).ready(function () {
     $btnGotoTop.click(function () {
         $("html, body").animate({ scrollTop: 0 }, 200);
     });
-    
+
     $myCV.click(function () {
         $cv.fadeIn();
         $([document.documentElement, document.body]).animate({
