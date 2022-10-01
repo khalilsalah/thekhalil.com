@@ -1,0 +1,72 @@
+:root {
+    --accent: #00afef;
+    --white: rgba(255, 255, 255, 0.9);
+    --black: #000;
+}
+
+@font-face {
+    font-family: SourceCodePro;
+    src: url(../fonts/SourceCodePro/SourceCodePro-Regular.ttf);
+}
+
+body {
+    color: var(--white);
+    background-color: var(--black);
+    animation: fade-in 2s;
+    font-family: SourceCodePro, 'Courier New', Courier, monospace !important;
+}
+
+a {
+    color: var(--white);
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+#head {
+    height: 100vh;
+    min-height: 375px;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 10vw !important;
+    }
+    #head p {
+        font-size: 3vw !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 10vw !important;
+    }
+    #head p {
+        font-size: 5vw !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    h1 {
+        font-size: 10vw !important;
+    }
+    #head p {
+        font-size: 3vw !important;
+    }
+}
+
+@media print {
+    body {
+        color: #000;
+        background-color: #fff;
+    }
+}
